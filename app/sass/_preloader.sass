@@ -1,0 +1,58 @@
+.preloader
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: #222
+	z-index: 9998
+	transition: 1s all
+	opacity: 1
+	visibility: visible
+
+	.loader
+		left: 50%
+		top: 50%
+		position: absolute
+		border-top: 3px solid #fff
+		border-bottom: 3px solid #fff
+		border-left: 3px solid transparent
+		border-right: 3px solid transparent
+		border-radius: 50%
+		transform: translate(-50%, -50%)
+		animation: 1.5s spin infinite linear
+
+	.loader1
+		width: 50px
+		height: 50px
+		animation: 2s spin infinite linear
+
+	.loader2
+		width: 35px
+		height: 35px
+		border-top: 3px solid transparent
+		border-bottom: 3px solid transparent
+		border-left: 3px solid #fff
+		border-right: 3px solid #fff
+		animation: 1.5s spinback infinite linear
+
+	.loader3
+		width: 20px
+		height: 20px
+		animation: 1s spin infinite linear
+
+	&.done
+		opacity: 0
+		visibility: hidden
+
+@keyframes spin
+	from
+		transform: translate(-50%, -50%) rotate(0deg)
+	to
+		transform: translate(-50%, -50%) rotate(360deg)
+
+@keyframes spinback
+	from
+		transform: translate(-50%, -50%) rotate(360deg)
+	to
+		transform: translate(-50%, -50%) rotate(0deg)

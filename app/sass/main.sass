@@ -1,0 +1,76 @@
+@import "preloader"
+@import "fonts"
+@import "libs"
+@import "vars"
+
+/*===== Own Styles ======*/
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+
+#page-wrapper
+	visibility: hidden
+	opacity: 0
+	&.done
+		visibility: visible
+		opacity: 1
+		
+h1
+	font-size: 37px
+
+h2
+	font-size: 28px
+
+h3
+	font-size: 21px
+
+h4
+	font-size: 16px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+/* -- Magnific Popup -- */
+.white-popup
+	position: relative
+	background: #FFF
+	padding: 20px
+	width: auto
+	max-width: 320px
+	margin: 20px auto
+	border-radius: 8px
+
+/*===== Media Import =====*/
+@import "media" // Всегда в конце
